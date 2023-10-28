@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equive="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>IMAGE GALLERY</h1>
+        <div class="image-container">
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/1.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/2.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/3.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/4.png"></div>
+           <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/5.png"></div>
+           <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/6.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/7.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/8.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/9.png"></div>
+            <div class="image"><img src="D:/MC INTERNSHIP/Projects/task-2/images/10.png"></div>
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="D:/MC INTERNSHIP/Projects/task-2/images/11.png" alt="">
+        </div>
+
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+           image.onclick=() =>{
+            document.querySelector('.popup-image').style.display='block';
+            document.querySelector('.popup-image img').src=image.getAttribute('src');
+           }
+        });
+
+        document.querySelector('.popup-image span').onclick=()=>{
+            document.querySelector('.popup-image').style.display='none';
+        }
+    </script>
+</body>
+</html>
